@@ -1,0 +1,10 @@
+public class FirstProgram
+Creates the program
+public static void main(String[]args)
+Create class (static)
+
+Class Code
+System.out.println("Hello World!");
+Prints out a message with a line (enter effect)
+System.out.print("Hello World!");
+Prints out a message without a line
