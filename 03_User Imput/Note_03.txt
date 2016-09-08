@@ -1,0 +1,16 @@
+Scanner Function Notes:
+- To use it, import it first by
+  import java.util.Scanner;
+
+- Add a Scanner Function
+  Scanner <Function Name> = new Scanner(System.in);
+
+- Print out a statement to imput
+  System.out.println("MESSAGE")
+
+- Define a var
+  TYPE NAME = ScannerName.RANGE();
+  Ex. int number = Snumber.nextInt();
+
+- Print out that var
+  System.out.println("MESSAGE"+VAR)
