@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Lab_02
 {
 	public static void main(String[]args)
@@ -22,5 +23,9 @@ public class Lab_02
 		int Volume = Length*Width*Height;
 		int SurfaceArea = Length*Width*2 + Width*Height*2 + Length*Height*2;
 		System.out.println("The serface area of the cuboid is: "+SurfaceArea);
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int newww = reader.nextInt();
+		System.out.println("The number your entered is: "+newww);
 	}
 }
