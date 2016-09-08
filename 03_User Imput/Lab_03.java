@@ -3,16 +3,17 @@ public class Lab_03
 {
 	public static void main(String[]args)
 	{
+		//AI
 		Scanner SName = new Scanner(System.in);
 		Scanner SAge = new Scanner(System.in);
 		Scanner SHobbies = new Scanner(System.in);
 		Scanner SMusic = new Scanner(System.in);
 		Scanner SSiblings = new Scanner(System.in);
 		Scanner SGrowUp = new Scanner(System.in);
-		
+		//BMI
 		Scanner SHeight = new Scanner(System.in);
 		Scanner SWeight = new Scanner(System.in);
-		
+		//Custom
 		Scanner SX = new Scanner(System.in);
 		Scanner SY = new Scanner(System.in);
 
@@ -58,6 +59,5 @@ public class Lab_03
 		System.out.println("|X - Y| = "+XYDifference);
 		System.out.println("X * Y = "+XYMulti);
 		System.out.println("--------------------------------Rude AI is Deactivated by Creator--------------------------------");
-		
 	}
 }
