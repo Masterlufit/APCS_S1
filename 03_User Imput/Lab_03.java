@@ -1,5 +1,5 @@
+import java.util.Date;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 public class Lab_03
 {
 	public static void main(String[]args)
@@ -17,11 +17,50 @@ public class Lab_03
 		//Custom
 		Scanner SX = new Scanner(System.in);
 		Scanner SY = new Scanner(System.in);
+		
 		System.out.println("--------------------------------Rude AI is Activated--------------------------------");
 		System.out.println("Detecting system version...");
+		try {
+
+			Thread.sleep(2000);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("System Version: 0.1.4 [Alpha]");
+		System.out.println("");
+		try {
+
+			Thread.sleep(500);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("Loading System Files...");
+		System.out.println("");
+		try {
+			Thread.sleep(1000);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("Entering Rude Mode...");
+		System.out.println("");
+		try {
+
+			Thread.sleep(1000);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("Hi, my name is Rude AI.");
 		System.out.println("I'd like to ask you a few questions.");
 		System.out.println("What is your name?");
@@ -44,15 +83,39 @@ public class Lab_03
 		System.out.println("I think you'd have to be smarter to be a "+GrowUp+"...");
 		System.out.println("So "+Name+", you are "+Age+", you like to "+Hobbies+" and listen to "+Music+", and good luck becoming a "+GrowUp);
 		System.out.println("Just kidding, "+Name);
+		System.out.println("");
 		System.out.println("Activating BMI Calculation...");
+		try {
+
+			Thread.sleep(2000);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("BMI Calculation Activated!");
+		System.out.println("");
 		System.out.println("How tall are you, "+Name+"?");
 		int Height = SHeight.nextInt();
 		System.out.println("How much do you weigh?");
 		int Weight = SWeight.nextInt();
 		int BMI = 703*Weight/Height/Height;
 		System.out.println("Your BMI is: "+BMI+".");
+		System.out.println("");
 		System.out.println("Activating Custom Calculation...");
+		try {
+
+			Thread.sleep(2000);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
+		System.out.println("Custom Calculation Activated!");
+		System.out.println("");
+		
 		System.out.println("Please enter int X and Y.");
 		System.out.println("Define X(any number):");
 		int X = SX.nextInt();
@@ -61,9 +124,38 @@ public class Lab_03
 		int XYSum = X+Y;
 		int XYDifference = Math.abs(X-Y);
 		int XYMulti = X*Y;
+		System.out.println("");
+		System.out.println("");
+		try {
+
+			Thread.sleep(500);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("X + Y = "+XYSum);
+		try {
+
+			Thread.sleep(500);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("|X - Y| = "+XYDifference);
+		try {
+
+			Thread.sleep(500);
+		}
+		
+		catch (InterruptedException e) 
+		{
+			e.printStackTrace();
+		}
 		System.out.println("X * Y = "+XYMulti);
-		System.out.println("--------------------------------Rude AI is Deactivated by Creator--------------------------------");
+		System.out.println("--------------------------------Rude AI is Deactivated--------------------------------");
 	}
 }
