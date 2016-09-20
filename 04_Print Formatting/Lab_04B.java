@@ -49,6 +49,22 @@ public class Lab_04B
 			methods.Delay1Second();
 			System.out.println("");
 			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
 			methods.Formatting(FirstName,LastName,Title,School,Year,Subject);
 		}
 		
@@ -84,37 +100,3 @@ public class Lab_04B
 		System.out.println("\n******************************");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
