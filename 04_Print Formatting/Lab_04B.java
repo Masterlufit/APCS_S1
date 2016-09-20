@@ -77,11 +77,11 @@ public class Lab_04B
 	
 	public void Formatting(String FFName, String FLName, String FTitle, String FSchool, String FYear, String FSubject)
 	{
-		System.out.println("****************************");
-		System.out.printf("\n* %10s\t%10s *",FSchool,FYear);
-		System.out.printf("\n* %10s\t%10s *",FFName,FLName);
-		System.out.printf("\n* %10s\t%10s *",FTitle,FSubject);
-		System.out.println("\n****************************");
+		System.out.println("******************************");
+		System.out.printf("\n* %10s\t%12s *",FSchool,FYear);
+		System.out.printf("\n* %10s\t%12s *",FFName,FLName);
+		System.out.printf("\n* %10s\t%12s *",FTitle,FSubject);
+		System.out.println("\n******************************");
 	}
 }
 
