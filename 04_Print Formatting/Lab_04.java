@@ -61,7 +61,25 @@ public class Lab_04
 			methods.Delay1Second();
 			System.out.println("");
 			System.out.println("");
-			methods.Formatting(ID1,ID1P,ID2,ID2P,ID3,ID3P);
+			
+			System.out.println(">>>>>>>>>>>>>>> Receipt <<<<<<<<<<<<<<<");
+			methods.Formatting(ID1,ID1P);
+			methods.Formatting(ID2,ID2P);
+			methods.Formatting(ID3,ID3P);
+			
+			double SubTotal = ID1P + ID2P + ID3P;
+			double Tax = SubTotal*0.07;
+			double Total = SubTotal+Tax;
+			
+			System.out.println("");
+			methods.Formatting("Sub-Total",SubTotal);
+			methods.Formatting("Tax",Tax);
+			methods.Formatting("Total",Total);
+			
+			
+			
+			System.out.println("\n---------------------------------------");
+			System.out.println("*Thanks for your support*");
 		}
 		
 		if (Confirm != 1)
@@ -87,19 +105,8 @@ public class Lab_04
 		}
 	}
 	
-	public void Formatting(String I1, double I1P, String I2,double I2P, String I3, double I3P)
+	public void Formatting(String Item, double ItemPrice)
 	{
-		System.out.println(">>>>>>>>>>>>>>> Receipt <<<<<<<<<<<<<<<");
-		System.out.printf("%10s ............\t %2f", I1, I1P);
-		System.out.printf("\n%10s ............\t %2f", I2, I2P);
-		System.out.printf("\n%10s ............\t %2f", I3, I3P);
-		double SubTotal = I1P + I2P + I3P;
-		double Tax = SubTotal*0.07;
-		double Total = SubTotal+Tax;
-		System.out.printf("\n\n%10s ............\t %2f", "Subtotal", SubTotal);
-		System.out.printf("\n%10s ............\t %2f", "Tax", Tax);
-		System.out.printf("\n%10s ............\t %2f", "Total", Total);
-		System.out.println("\n---------------------------------------");
-		System.out.println("*Thanks for your support*");
+		System.out.printf("%10s ............\t %2f\n", Item, ItemPrice);
 	}
 }
