@@ -9,12 +9,14 @@ public class Lab_02
 		System.out.println("0.5 multiplied by 10 is "+a*b);
 		System.out.println("");
 		System.out.println("Concatenation");
+		System.out.println("");
 		int Number = 3710;
 		String Road = "Del Mar Hights Rd, ";
 		String City = "San Diego, ";
 		String State = "CA";
 		int Zip = 92130;
-		System.out.println("TPHS Address: "+Number+" "+Road+City+State+" "+Zip);
+		System.out.println("TPHS Address\n"+Number+" "+Road+"\n"+City+State+" "+Zip);
+		System.out.println("Address Line 3");
 		System.out.println("");
 		System.out.println("Complex Calculation");
 		int Length = 8;
