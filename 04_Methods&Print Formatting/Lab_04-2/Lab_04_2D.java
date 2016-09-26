@@ -26,6 +26,6 @@ public class Lab_04_2D
 	
 	public static void Print()
 	{
-		System.out.println("Area is: "+UniArea);
+		System.out.println("Area of a circle with a radius of "+UniRad+"is: "+UniArea);
 	}
 }
