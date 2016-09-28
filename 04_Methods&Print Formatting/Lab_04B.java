@@ -65,7 +65,7 @@ public class Lab_04B
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
-			System.out.println("******************************");
+			System.out.print("******************************");
 			methods.Formatting(FirstName,LastName);
 			methods.Formatting(Title,School);
 			methods.Formatting(Year,Subject);
