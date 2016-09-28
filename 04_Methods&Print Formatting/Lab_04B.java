@@ -65,7 +65,11 @@ public class Lab_04B
 			System.out.println("");
 			System.out.println("");
 			System.out.println("");
-			methods.Formatting(FirstName,LastName,Title,School,Year,Subject);
+			System.out.println("******************************");
+			methods.Formatting(FirstName,LastName);
+			methods.Formatting(Title,School);
+			methods.Formatting(Year,Subject);
+			System.out.println("\n******************************");
 		}
 		
 		if (Confirm != 1)
@@ -91,12 +95,8 @@ public class Lab_04B
 		}
 	}
 	
-	public void Formatting(String FFName, String FLName, String FTitle, String FSchool, String FYear, String FSubject)
+	public void Formatting(String Info, String Info2)
 	{
-		System.out.println("******************************");
-		System.out.printf("\n* %10s\t%12s *",FSchool,FYear);
-		System.out.printf("\n* %10s\t%12s *",FFName,FLName);
-		System.out.printf("\n* %10s\t%12s *",FTitle,FSubject);
-		System.out.println("\n******************************");
+		System.out.printf("\n* %10s\t%12s *",Info,Info2);
 	}
 }
