@@ -13,7 +13,7 @@ public class Lab_05A
 	public static void main(String[]args)
 	{
 		//print directions
-		System.out.println("Roll the dice by typing Roll");
+		System.out.println("Roll the dice by typing \"R\"");
 		boolean RollorNot = Roll();
 		if (RollorNot)
 		{
@@ -40,6 +40,8 @@ public class Lab_05A
 				System.out.println("Computer Wins!");
 			if (Win==2)
 				System.out.println("It is a Tie!");	
+			if (Win==3)
+				System.out.println("BUG!");	
 		}
 		
 	}
@@ -50,7 +52,7 @@ public class Lab_05A
 		String Roll = SRoll.next();
 		
 		//if typed Roll
-		if (Roll.equals("Roll"))
+		if (Roll.equals("R"))
 		{
 			System.out.println("a");
 			return true;
@@ -90,22 +92,25 @@ public class Lab_05A
 	public static void RollingAnim()
 	{
 		int Times = 0;
-		for (Times = 40;Times >= 0;Times--)
+		for (Times = 10;Times >= 0;Times--)
 		{
 			Rolling();
-			Delay(50);
+			Delay(100);
 		}
 	}
 	
 	public static int Compare(int a, int b)
 	{
+		//Player Wins
 		if (a>b)
 			return 1;
-		
+		//Computer Wins
 		if (a<b)
 			return 0;
+		//Tie
 		if (a==b)
 			return 2;
-		return 0;
+		//Debug Statement
+		return 3;
 	}
 }
