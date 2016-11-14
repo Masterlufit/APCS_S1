@@ -1,33 +1,27 @@
 import java.util.*;
-public class Lab_08A
+public class Lab_08D
 {
 	static int search = 0;
-	static String newSentence = "";
+	static int stop = 0;
 	
 	public static void main(String[]args)
 	{
 		Scanner Input = new Scanner(System.in);
 		
-		System.out.println("Type in a sentence:");
-		String UserInput = Input.nextLine();
-		replace(UserInput);
+		System.out.println("Type in a word:");
+		String UserInput = Input.next();
+		tree(UserInput);
 	}
 	
-	public static void replace(String UserInput)
+	public static void tree(String UserInput)
 	{
 		search++;
 		String A = "";
-		if(search<=UserInput.length())
+		if(search<=UserInput.length()+1)
 		{
-			A = UserInput.substring(search-1,search);
-			if(A.equals(" "))
-			{
-				A = "_";
-			}
-			newSentence += A;
-			replace(UserInput);
+			A = UserInput.substring(0,search-1);
+			System.out.printf("%10s\n",A);
+			tree(UserInput);
 		}
-		else
-			System.out.println("The new sentence is:\n"+newSentence);
 	}
 }
