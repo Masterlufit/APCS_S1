@@ -10,9 +10,9 @@ public class Lab_04_2
 		Scanner SLength = new Scanner(System.in);
 		Scanner SWidth = new Scanner(System.in);
 		
-		System.out.println("Enter the lengh of the #Rekt:");
+		System.out.println("Enter the lengh of the Rectangle:");
 		UniLength = SLength.nextFloat();
-		System.out.println("Enter the width of the #Rekt:");
+		System.out.println("Enter the width of the Rectangle:");
 		UniWidth = SWidth.nextFloat();
 		
 		Method.Peri(UniLength,UniWidth);
@@ -21,14 +21,13 @@ public class Lab_04_2
 		
 	}
 	
-	public float Peri(float Length, float width)
+	public void Peri(float Length, float width)
 	{
 		Perimeter = UniLength+UniLength+UniWidth+UniWidth;
-		return Perimeter;
 	}
 	
 	public void Print()
 	{
-		System.out.println("Your #Rekt's perimeter is: "+Perimeter);
+		System.out.println("Your Rectangle's perimeter is: "+Perimeter);
 	}
 }

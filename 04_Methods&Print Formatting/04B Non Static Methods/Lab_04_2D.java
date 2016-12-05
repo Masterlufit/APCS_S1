@@ -18,15 +18,15 @@ public class Lab_04_2D
 		
 	}
 	
-	public float Avg(float a)
+	public void Avg(float a)
 	{
 		float Square = UniRad*UniRad;
 		UniArea = Square*3.14f;
-		return UniArea;
+		//return UniArea;
 	}
 	
 	public void Print()
 	{
-		System.out.println("Area of a circle with a radius of "+UniRad+"is: "+UniArea);
+		System.out.println("Area of a circle with a radius of "+UniRad+" is: "+UniArea);
 	}
 }

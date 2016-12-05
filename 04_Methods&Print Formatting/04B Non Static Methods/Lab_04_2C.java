@@ -18,11 +18,10 @@ public class Lab_04_2C
 		
 	}
 	
-	public float Avg(float a)
+	public void Avg(float a)
 	{
 		float Square = UniSide*UniSide;
 		UniSurfArea = Square*6;
-		return UniSurfArea;
 	}
 	
 	public void Print()

@@ -26,11 +26,10 @@ public class Lab_04_2B
 		
 	}
 	
-	public float Avg(float a, float b, float c)
+	public void Avg(float a, float b, float c)
 	{
 		float Sum = UniNum1+UniNum2+UniNum3;
 		UniAvg = Sum/3;
-		return UniAvg;
 	}
 	
 	public void Print()
