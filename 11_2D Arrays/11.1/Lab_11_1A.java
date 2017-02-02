@@ -1,10 +1,10 @@
-
 import java.util.Scanner;
 
 public class Lab_11_1A {
 	static int bulletCount;
 	static int clipSize = 16;
 	static int shotCount;
+	static boolean end;
 	static String[] clipValue;
 
 	public static void main(String[] a) {
@@ -13,19 +13,17 @@ public class Lab_11_1A {
 		shotCount = 0;
 		clipValue = new String[clipSize];
 		resetClip();
-		while (bulletCount > 0) {
-			while (shotCount >= 0) {
-				System.out.println("Action:");
-				String action = s.next();
-				if (action.equals("R")) {
-					reload();
-				} else if (action.equals("S")) {
-					System.out.println(shoot());
-				}
-				printClip();
+		while (shotCount >= 0&&!end) {
+			System.out.println("Action:");
+			String action = s.next();
+			if (action.equals("R")) {
+				reload();
+			} else if (action.equals("S")) {
+				System.out.println(shoot());
 			}
+			printClip();
 		}
-		System.out.println("Out of AMMO!");
+		System.out.println("Game Over!");
 		s.close();
 	}
 
@@ -60,7 +58,8 @@ public class Lab_11_1A {
 			shotCount--;
 			return "Boom!";
 		}
-		return "Press R to reload!";
+		end=true;
+		return "OUT OF AMMO!";
 	}
 
 	public static void printClip() {
