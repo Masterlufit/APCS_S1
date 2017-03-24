@@ -2,7 +2,9 @@ import java.util.*;
 
 public class Toyota implements Location{
 	private double[] location;
-
+	private Random r =new Random();
+	private final int id = r.nextInt(1000000);
+	
 	public Toyota(String loc) {
 		try{
 			String[] loc_string = loc.split(", ");
@@ -14,8 +16,7 @@ public class Toyota implements Location{
 	}
 
 	public int getID() {
-		Random r = new Random();
-		return r.nextInt(1000000);
+		return id;
 	}
 
 	public void move(double x, double y) {

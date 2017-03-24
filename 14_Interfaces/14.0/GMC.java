@@ -2,15 +2,16 @@ import java.util.*;
 
 public class GMC implements Location{
 	private double loc_x, loc_y;
-
+	private Random r =new Random();
+	private final int id = r.nextInt(1000000);
+	
 	public GMC(double x, double y) {
 		this.loc_x = x;
 		this.loc_y = y;
 	}
 
 	public int getID() {
-		Random r = new Random();
-		return r.nextInt(1000000);
+		return id;
 	}
 
 	public void move(double x, double y) {
