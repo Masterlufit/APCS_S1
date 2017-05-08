@@ -22,7 +22,7 @@ public class PictureTester
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
-    caterpillar.mirrorVertical();
+	caterpillar.mirrorDia();
     caterpillar.explore();
   }
   
@@ -51,6 +51,12 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testMirrorArms(){
+	Picture pic = new Picture("snowman.jpg");
+	pic.mirrorArms();
+    pic.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,7 +64,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
