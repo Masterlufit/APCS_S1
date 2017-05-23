@@ -58,7 +58,7 @@ public class Magpie2 {
 		String raw = statement.trim().replaceAll("[^a-zA-Z ]+", "");
 		raw = raw.replaceFirst("You","").replaceFirst("you","");
 		
-		String output ="What makes you think that I " + replaceLast(raw, "me");
+		String output ="What makes you think that I" + replaceLast(raw, "me", "you");
 		return output;
 	}
 	
@@ -66,26 +66,31 @@ public class Magpie2 {
 		String raw = statement.trim().replaceAll("[^a-zA-Z ]+", "");
 		raw = raw.replaceFirst("You","").replaceFirst("I","").trim();
 		
-		String output ="Why do you " + raw.replace("you","me");
+		String output = "Why do you " + raw.replace("you","me");
 		return output;
 	}
 	
-	private String replaceLast(String statement, String goal) {
-		String phrase = statement.toLowerCase().trim();
-		String[] words = phrase.split(" ");
-		for (int a = 0;a<words.length;a++) {
-			String word = words[words.length-a];
-			String refined_goal = goal.toLowerCase();
-			String replace_all_special_char = word.replaceAll("[^a-zA-Z ]+", "");
-			if (replace_all_special_char.contains(refined_goal)
-					&& replace_all_special_char.length() == refined_goal.length()){
-				words[words.length-a] = goal;
-			}
-		}
-		
+	public static String replaceLast(String msg, String replaceFrom, String replaceTo) {
 		String output = "";
-		for(String add:words){
-			output+= add+" ";
+		if (!msg.contains(replaceFrom)) {
+			return msg;
+		}
+
+		int length = replaceFrom.length();
+		for (int a = msg.length(); a > 0; a--) {
+			String sub;
+			if (a + length > msg.length()) {
+				sub = msg.substring(a);
+			} else {
+				sub = msg.substring(a, a + length);
+			}
+
+			if (sub.equals(replaceFrom)) {
+				output += msg.substring(0, a);
+				output += replaceTo;
+				output += msg.substring(a + length);
+				break;
+			}
 		}
 		return output;
 	}
