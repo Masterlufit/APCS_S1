@@ -5,7 +5,7 @@ public class Satellite {
 		ArrayList<Location> locate = new ArrayList<>();
 		Random r = new Random();
 		int x = r.nextInt(100);
-		int y=r.nextInt(100);
+		int y = r.nextInt(100);
 		double[] honLoc = { 5, 6 };
 		locate.add(new Honda(honLoc));
 		locate.add(new Toyota("8, 9"));
@@ -22,6 +22,8 @@ public class Satellite {
 		printout += "\n\n" + "==========================" + "\nMoved locations...";
 
 		for (Location l : locate) {
+			x = r.nextInt(100);
+			y = r.nextInt(100);
 			printout += "\nAfter " + ((Car)l).getID() + " moved from: (" + getLocation(((Car)l).getLoc()) + ")";
 			((Car)l).move(x,y);
 			printout += "\nNew Location for " + ((Car)l).getID() + " is: (" + getLocation(((Car)l).getLoc()) + ")";
