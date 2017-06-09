@@ -17,12 +17,89 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+  
+  
+  public static void testNegate()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
+  
+  public static void testGrayscale()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayScale();
+    beach.explore();
+  }
+  
+  public static void testFixUnderwater()
+  {
+	Picture water = new Picture("water.jpg");
+    water.explore();
+    water.fixUnderWater();
+    water.explore();
+  }
+  
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
-	caterpillar.mirrorDia();
+    caterpillar.mirrorVertical();
+    caterpillar.explore();
+  }
+  
+  public static void testMirrorDiagonal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorDiagonal();
+    caterpillar.explore();
+  }
+  
+    public static void testMirrorVerticalRightToLeft()
+  {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorVerticalRightToLeft();
+    beach.explore();
+  }
+  
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+  public static void testMirrorHorizontalBottomToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBottomToTop();
     caterpillar.explore();
   }
   
@@ -35,6 +112,18 @@ public class PictureTester
     temple.explore();
   }
   
+  public static void testCopy()
+  {
+  }
+  
+   /** Method to test edgeDetection */
+  public static void testEdgeDetection()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.edgeDetection(10);
+    swan.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -43,19 +132,13 @@ public class PictureTester
     canvas.explore();
   }
   
-  /** Method to test edgeDetection */
-  public static void testEdgeDetection()
+  public static void testMyCollage()
   {
-    Picture swan = new Picture("swan.jpg");
-    swan.edgeDetection(10);
-    swan.explore();
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.createCollage();
+    canvas.explore();
   }
   
-  public static void testMirrorArms(){
-	Picture pic = new Picture("snowman.jpg");
-	pic.mirrorArms();
-    pic.explore();
-  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -64,21 +147,22 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    //testZeroBlue();
-    //testKeepOnlyBlue();
-    //testKeepOnlyRed();
-    //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
-    //testMirrorDiagonal();
-    //testCollage();
+    testZeroBlue();
+    testKeepOnlyBlue();
+    testNegate();
+    testGrayscale();
+    testFixUnderwater();
+    testMirrorVertical();
+	testMirrorHorizontal();
+    testMirrorTemple();
+	testMirrorVerticalRightToLeft();
+	testMirrorHorizontalBottomToTop();
+    testMirrorArms();
+    testMirrorDiagonal();
+    //testMyCollage();
+	testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

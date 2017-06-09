@@ -239,7 +239,7 @@ public class Picture extends SimplePicture
     } 
   }
   
-  public void mirrorHorizontalBotToTop()
+  public void mirrorHorizontalBottomToTop()
   {
     Pixel[][] pixels = this.getPixels2D();
     Pixel upPixel = null;
@@ -256,7 +256,7 @@ public class Picture extends SimplePicture
     } 
   }
   
-  public void mirrorDia()
+  public void mirrorDiagonal()
   {
     Pixel[][] pixels = this.getPixels2D();
     Pixel before = null;
@@ -367,6 +367,7 @@ public class Picture extends SimplePicture
     this.write("collage.jpg");
   }
   
+  /*
   public void createCollage()
   {
     Picture swan1 = new Picture("swan.jpg");
@@ -382,7 +383,7 @@ public class Picture extends SimplePicture
     this.copy(swan3,200,0);
    
     this.write("collage.jpg");
-  }
+  }*/
   
   
   /** Method to show large changes in color 
@@ -409,22 +410,6 @@ public class Picture extends SimplePicture
           leftPixel.setColor(Color.WHITE);
       }
     }
-	
-	for (int row = 0; row < pixels.length; row++)
-    {
-      for (int col = 0; 
-           col < pixels[0].length-1; col++)
-      {
-        leftPixel = pixels[col][row];
-        rightPixel = pixels[col][row+1];
-        rightColor = rightPixel.getColor();
-        if (leftPixel.colorDistance(rightColor) > 
-            edgeDist)
-          leftPixel.setColor(Color.BLACK);
-        else
-          leftPixel.setColor(Color.WHITE);
-      }
-    }
   }
   
   
@@ -433,9 +418,9 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("water.jpg");
-    beach.explore();
-    beach.fixUnderWater();
+    Picture beach = new Picture("swan.jpg"); 
+	beach.explore();
+    beach.edgeDetection(10);
     beach.explore();
   }
   
